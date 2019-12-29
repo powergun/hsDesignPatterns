@@ -26,6 +26,8 @@ class The d a | d -> a where
 
 instance The (a ~~ name) a
 
+-- this is bad!!!
+-- see DemoTypeOperators for why
 any_name :: a -> (a ~~ name)
 any_name = coerce
 

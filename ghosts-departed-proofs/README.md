@@ -61,7 +61,20 @@ see also, DemoPhantomTypes.hs, for a degenerated example where the
 `name` parameter is hardcoded to be a function; recall the `tag-dispatching`
 strategy in C++
 
+MY NOTES: see DemoTypeOperators.hs to understand `~~` (and where is
+`name` plugged in); see DemoPhantomTypesRestricted.hs for a working
+example that implements the restriction on the "tag type"
+
 ## Case study: Sort-Merge library
 
 NOTE: this library uses MissingH package (a large collection of
 utility functions)
+
+> What is the critical difference between these two examples?
+> In the first, a user is allowed to create a named value by fiat.
+> In the second, the user is only allowed to consume a named
+> value, by providing a polymorphic function that can work
+> with any named value.
+
+MY NOTES: compare `SortMerge.hs` to `DemoTypeOperators.hs` and
+`DemoPhantomTypesRestricted.hs`
