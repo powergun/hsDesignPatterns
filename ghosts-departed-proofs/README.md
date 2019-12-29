@@ -56,3 +56,7 @@ MY NOTES: see `test/DemoNamed.hs`
 ## Use a two-parameter typeclass to unify name-stripping
 
 see Named.hs and DemoNamed.hs
+
+see also, DemoPhantomTypes.hs, for a degenerated example where the
+`name` parameter is hardcoded to be a function; recall the `tag-dispatching`
+strategy in C++
