@@ -1,7 +1,9 @@
 import qualified DemoNamed
-import qualified DemoPhatomTypes
+import qualified DemoPhantomTypes
+import qualified DemoPhantomTypesRestricted
 
 main :: IO ()
 main = do
-  DemoPhatomTypes.demo
+  DemoPhantomTypes.demo
+  DemoPhantomTypesRestricted.demo
   DemoNamed.demo

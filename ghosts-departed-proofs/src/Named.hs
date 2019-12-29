@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeOperators          #-}
 {-# LANGUAGE TypeSynonymInstances   #-}
 
-module Named (Named, type (~~), name, The(..)) where
+module Named (Named, type (~~), name, The(..), any_name) where
 
 import           Data.Coerce
 
@@ -25,3 +25,7 @@ class The d a | d -> a where
   the = coerce
 
 instance The (a ~~ name) a
+
+any_name :: a -> (a ~~ name)
+any_name = coerce
+

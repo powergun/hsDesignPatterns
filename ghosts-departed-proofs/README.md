@@ -60,3 +60,8 @@ see Named.hs and DemoNamed.hs
 see also, DemoPhantomTypes.hs, for a degenerated example where the
 `name` parameter is hardcoded to be a function; recall the `tag-dispatching`
 strategy in C++
+
+## Case study: Sort-Merge library
+
+NOTE: this library uses MissingH package (a large collection of
+utility functions)
