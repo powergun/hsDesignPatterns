@@ -22,6 +22,7 @@ description: Please see the README on GitHub at <https://github.com/githubuser/h
 dependencies:
   - base >= 4.7 && < 5
   - rio == 0.1.12.0
+  - lens == 4.17.1
 
 library:
   source-dirs: src
