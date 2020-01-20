@@ -3,6 +3,9 @@
 inspired by RIO tutorial: <https://tech.fpcomplete.com/haskell/library/rio>
 has-typeclass example
 
+NOTE: **this pattern is more powerful when combined with Lens**, see
+hsSysAdmin/therio/src/Types/HasPropertyLens.hs for an example
+
 ## Use Has-Typeclass to enforce (data) compliance
 
 to enforce that some unknown type must be able provide some critical
