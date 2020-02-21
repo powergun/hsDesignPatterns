@@ -13,3 +13,6 @@ data structure being traversed over
 
 Foldable: This process, in turn, discards or transforms the shape of
 the structure being folded over
+
+> Since `Traversable` is a specialization of `Foldable`, we can say that
+> shape preservation is a special case of shape transformation.
