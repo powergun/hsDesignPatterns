@@ -29,7 +29,7 @@ resolver: lts-15.3
 #   - auto-update
 #   - wai
 packages:
-- .
+  - .
 # Dependency packages to be pulled from upstream that are not in the resolver.
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
@@ -39,8 +39,8 @@ packages:
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-# extra-deps: []
-
+extra-deps:
+  - natural-numbers-0.1.2.0@sha256:0fcbe1220979b83fa612fca73a1adb1a99ff43c84f9652b3ff32b2323309b43c,1407
 # Override default flag values for local packages and extra-deps
 # flags: {}
 

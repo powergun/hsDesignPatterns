@@ -3,7 +3,14 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: natural-numbers-0.1.2.0@sha256:0fcbe1220979b83fa612fca73a1adb1a99ff43c84f9652b3ff32b2323309b43c,1407
+    pantry-tree:
+      size: 220
+      sha256: bd4beb677280f4586265c5657ab4e4a599c16f9e624df43d8edda6bf1e46dcdf
+  original:
+    hackage: natural-numbers-0.1.2.0@sha256:0fcbe1220979b83fa612fca73a1adb1a99ff43c84f9652b3ff32b2323309b43c,1407
 snapshots:
 - completed:
     size: 491373

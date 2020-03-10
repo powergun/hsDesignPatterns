@@ -1,14 +1,14 @@
-name:                ddd-order
-version:             0.1.0.0
-github:              "githubuser/ddd-order"
-license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2020 Author name here"
+name: ddd-order
+version: 0.1.0.0
+github: 'githubuser/ddd-order'
+license: BSD3
+author: 'Author name here'
+maintainer: 'example@example.com'
+copyright: '2020 Author name here'
 
 extra-source-files:
-- README.md
-- ChangeLog.md
+  - README.md
+  - ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -17,32 +17,33 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/ddd-order#readme>
+description: Please see the README on GitHub at <https://github.com/githubuser/ddd-order#readme>
 
 dependencies:
-- base >= 4.7 && < 5
+  - base >= 4.7 && < 5
+  - natural-numbers == 0.1.2.0
 
 library:
   source-dirs: src
 
 executables:
   ddd-order-exe:
-    main:                Main.hs
-    source-dirs:         app
+    main: Main.hs
+    source-dirs: app
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - ddd-order
+      - ddd-order
 
 tests:
   ddd-order-test:
-    main:                Spec.hs
-    source-dirs:         test
+    main: Spec.hs
+    source-dirs: test
     ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - ddd-order
+      - ddd-order
