@@ -2,7 +2,7 @@ module OrderTakingWorkflow where
 
 -- see: https://jeltsch.wordpress.com/2012/03/20/natural-numbers-in-haskell/
 -- source: http://hackage.haskell.org/package/natural-numbers
-import           Data.Natural
+-- import           Data.Natural
 
 -- from DDD FP book L641
 -- model the book's example in haskell
@@ -37,7 +37,7 @@ data ProductCode = PW WidgetCode | PG GizmoCode
 -- see also: https://stackoverflow.com/questions/8510570/restricting-values-in-type-constructors
 -- EDIT: I need to use smart ctor anyway to follow the book examples
 data OrderQuantity = OUn UnitQuantity | OKi KilogramQuantity
-data UnitQuantity = UnitQuantity Natural
+data UnitQuantity = UnitQuantity Int
 makeUnitQuantity x = if (x >= 1 && x <= 1000)
                      then UnitQuantity x
                      else undefined
