@@ -4,7 +4,7 @@ module OrderTakingWorkflow where
 -- source: http://hackage.haskell.org/package/natural-numbers
 -- import           Data.Natural
 
--- from DDD FP book L641
+-- from DDD FP book L641 
 -- model the book's example in haskell
 
 data CustomerInfo
@@ -46,3 +46,19 @@ makeUnitQuantity x = if (x >= 1 && x <= 1000)
 makeKilogramQuantity x = if (x >= 0.05 && x <=100.0)
                          then KilogramQuantity x
                          else undefined
+
+-- DDD FP Book L1981
+
+data UnvalidatedOrder
+data AcknowledgementSent
+data OrderPlaced
+data BillableOrderPlaced
+
+data PlaceOrderEvents = PlaceOrderEvents
+    { acknowledgementSent :: AcknowledgementSent
+    , orderPlaced :: OrderPlaced
+    , billableOrderPlaced :: BillableOrderPlaced
+    }
+
+placeOlder :: UnvalidatedOrder -> PlaceOrderEvents
+placeOlder = undefined
