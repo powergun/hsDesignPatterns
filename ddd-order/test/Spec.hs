@@ -1,5 +1,5 @@
-import qualified OrderTakingWorkflowSpec
+import qualified OrderTakingDomainSpec
 
 main :: IO ()
 main = do
-    OrderTakingWorkflowSpec.spec
+    OrderTakingDomainSpec.spec

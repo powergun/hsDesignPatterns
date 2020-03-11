@@ -1,4 +1,4 @@
-module OrderTakingWorkflow where
+module OrderTaking.Workflow where
 
 -- see: https://jeltsch.wordpress.com/2012/03/20/natural-numbers-in-haskell/
 -- source: http://hackage.haskell.org/package/natural-numbers
@@ -62,15 +62,3 @@ data PlaceOrderEvents = PlaceOrderEvents
 
 placeOlder :: UnvalidatedOrder -> PlaceOrderEvents
 placeOlder = undefined
-
---- DDD FP Book L2246
-
-data Contact = Contact 
-    { contactId :: Int
-    , name :: String
-    , address :: String
-    }
-    deriving (Show)
-
-instance Eq Contact where
-    (==) lhs rhs = contactId lhs == contactId rhs
