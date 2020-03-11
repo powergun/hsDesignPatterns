@@ -30,19 +30,19 @@ data GizmoCode = GizmoCode String
 makeGizmoCode s@('G':x:y:z:w) = GizmoCode s
 makeGizmoCode _               = undefined
 
-data ProductCode = PW WidgetCode | PG GizmoCode
+data ProductCode = PW WidgetCode
+                 | PG GizmoCode
 
 -- another to enforce the value range restriction on the type level is
 -- using a smart contructor (like the makeXXX functions above)
 -- see also: https://stackoverflow.com/questions/8510570/restricting-values-in-type-constructors
 -- EDIT: I need to use smart ctor anyway to follow the book examples
-data OrderQuantity = OUn UnitQuantity | OKi KilogramQuantity
-data UnitQuantity = UnitQuantity Int
+data OrderQuantity = UnitQuantity Int
+                   | KilogramQuantity Float
+                   deriving (Eq, Ord, Show)
 makeUnitQuantity x = if (x >= 1 && x <= 1000)
                      then UnitQuantity x
                      else undefined
-
-data KilogramQuantity = KilogramQuantity Float
 makeKilogramQuantity x = if (x >= 0.05 && x <=100.0)
                          then KilogramQuantity x
                          else undefined
