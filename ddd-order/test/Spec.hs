@@ -1,2 +1,5 @@
+import qualified OrderTakingWorkflowSpec
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = do
+    OrderTakingWorkflowSpec.spec
