@@ -1,6 +1,6 @@
 module OrderTaking.Domain ( Contact, mkContact ) where
 
--- from DDD FP book L641 
+-- from DDD FP book L641
 -- model the book's example in haskell
 
 data CustomerInfo
@@ -14,7 +14,7 @@ data AmountToBill
 data Order =
     Order CustomerInfo ShippingAddress BillingAddress [OrderLine] AmountToBill
 
-data OrderLine = 
+data OrderLine =
     OrderLine Product Quantity Price
 
 -- DDD FP book L728
@@ -52,28 +52,36 @@ data BillableOrderPlaced
 
 data PlaceOrderEvents = PlaceOrderEvents
     { acknowledgementSent :: AcknowledgementSent
-    , orderPlaced :: OrderPlaced
+    , orderPlaced         :: OrderPlaced
     , billableOrderPlaced :: BillableOrderPlaced
     }
 
-placeOlder :: UnvalidatedOrder -> PlaceOrderEvents
-placeOlder = undefined
-
 --- DDD FP Book L2246
 
-data Contact = Contact 
+data Contact = Contact
     { contactId :: Int
-    , name :: String
-    , address :: String
+    , name      :: String
+    , address   :: String
     }
     deriving (Show)
 
 -- hide data ctor and expose a smart constructor function
 -- caller can not:
--- - deconstruct contact entity 
+-- - deconstruct contact entity
 -- - modify a field
 mkContact :: Int -> String -> String -> Contact
 mkContact c n a = Contact { contactId = c, name = n, address = a }
 
 instance Eq Contact where
     (==) lhs rhs = contactId lhs == contactId rhs
+
+-- DDD FP Book L3134
+-- share common structures using generics
+
+data Command a = Command
+    { value     :: a
+    , timestamp :: Int
+    }
+
+placeOlder :: Command a -> PlaceOrderEvents
+placeOlder = undefined
