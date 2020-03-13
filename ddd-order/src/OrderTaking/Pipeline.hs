@@ -79,3 +79,12 @@ priceOrder :: (ProductCode -> Price)
            -> ValidatedOrder
            -> Either PricingError PricedOrder
 priceOrder = undefined
+
+newtype OrderId = OrderId String
+mkOrderId :: String -> OrderId
+mkOrderId s 
+    | length s == 0       = error "OrderId must NOT be an empty string"
+    | (> 50) . length $ s = error "OrderId must NOT be longer than 50 chars"
+    | otherwise           = OrderId s            
+orderIdToString :: OrderId -> String
+orderIdToString (OrderId s) = s
