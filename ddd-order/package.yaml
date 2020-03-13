@@ -22,6 +22,7 @@ description: Please see the README on GitHub at <https://github.com/githubuser/d
 dependencies:
   - base >= 4.7 && < 5
   - natural-numbers == 0.1.2.0
+  - time
 
 library:
   source-dirs: src
